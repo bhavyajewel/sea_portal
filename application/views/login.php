@@ -32,14 +32,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="content-wthree">
 		<div class="circle-w3layouts"></div>
 			<h2>Login</h2>
-			<form action="#" method="post">
+			<form action="<?php echo base_url();?>/Welcome/login_program" method="post">
 								<div class="inputs-w3ls">
 									<i class="fa fa-user" aria-hidden="true"></i>
-									<input type="text" name="Username" placeholder="Username" required=""/>
+									<input type="text" name="username" placeholder="Username" required=""/>
 								</div>
 								<div class="inputs-w3ls">
 									<i class="fa fa-key" aria-hidden="true"></i>
-									<input type="password" name="Password" placeholder="Password" required=""/>
+									<input type="password" name="password" placeholder="Password" required=""/>
 								</div>
 									<input type="submit" value="LOGIN"> 
 									<div class="wthree-text"> 
@@ -51,7 +51,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 	</div>
 	<div class="footer-w3l">
-		<p class="agileinfo"> &copy; 2017 Basic Login Form. All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+		<!-- <p class="agileinfo"> &copy; 2017 Basic Login Form. All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p> -->
 	</div>
 </body>
 </html>

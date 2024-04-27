@@ -857,19 +857,17 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3 class="card-title">News Updation and Deletion</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>name</th>
-                    <th>address</th>
-                    <th>state</th>
-                    <th>district</th>
-                    <th>contact</th>
-                    <th>email</th>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Amount</th>
+                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -878,26 +876,24 @@
   
                   <tr>
                     <td><?php echo $row->name;?></td>
-                    <td><?php echo $row->address;?></td>
-                    <td><?php echo $row->state;?></td>
-                    <td><?php echo $row->district;?></td>
                     <td><?php echo $row->contact;?></td>
-                    <td><?php echo $row->email;?></td>
-                    <td><a href="<?php echo base_url();?>Welcome/companyapproval/<?php echo $row->id;?>/" class='btn btn-success'>Approve</a><td>
-                    <td><a href="<?php echo base_url();?>Welcome/companyreject/<?php echo $row->id;?>/" class='btn btn-danger'>Reject</a></td>  
+                    <td><?php echo $row->amount;?></td>
+                    <?php if($row->approve_status==1){?>
+                        <td>approved
+                          <?php } else { ?>
+                    <td><a href="<?php echo base_url();?>Welcome/tenderapproval/<?php echo $row->tapplyid;?>"class='btn btn-success'>approve</a><td>
+                    <?php } ?>
                   </tr>
                   <?php } ?>
                   </tbody>
-                  <tfoot>
+                  <!-- <tfoot>
                   <tr>
-                    <th>name</th>
-                    <th>address</th>
-                    <th>state</th>
-                    <th>district</th>
-                    <th>contact</th>
-                    <th>email</th>
+                    <th>news</th>
+                    <th>current date</th>
+                  
+                   
                   </tr>
-                  </tfoot>
+                  </tfoot> -->
                 </table>
               </div>
               <!-- /.card-body -->
@@ -967,3 +963,4 @@
 </script>
 </body>
 </html>
+

@@ -3,16 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | DataTables</title>
+  <title>AdminLTE 3 | Validation Form</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="<?php echo base_url();?>admin/https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?php echo base_url();?>admin/plugins/fontawesome-free/css/all.min.css">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="<?php echo base_url();?>admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>admin//plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url();?>admin/dist/css/adminlte.min.css">
 </head>
@@ -67,7 +63,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?php echo base_url();?>admin/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -83,7 +79,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?php echo base_url();?>admin/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -99,7 +95,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?php echo base_url();?>admin/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -160,7 +156,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="<?php echo base_url();?>admin/index3.html" class="brand-link">
-      <img src="<?php echo base_url();?>admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
 
@@ -169,7 +165,7 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?php echo base_url();?>admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Alexander Pierce</a>
@@ -385,8 +381,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Forms
@@ -413,15 +409,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url();?>admin/forms/validation.html" class="nav-link">
+                <a href="<?php echo base_url();?>admin/forms/validation.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Validation</p>
+                  <p>News update</p>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Tables
@@ -436,7 +432,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url();?>admin/tables/data.html" class="nav-link active">
+                <a href="<?php echo base_url();?>admin/tables/data.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>DataTables</p>
                 </a>
@@ -735,7 +731,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url();?>admin/https://adminlte.io/docs/3.1/" class="nav-link">
+            <a href="https://adminlte.io/docs/3.1/" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
               <p>Documentation</p>
             </a>
@@ -838,12 +834,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>DataTables</h1>
+            <h1>Validation</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
+              <li class="breadcrumb-item active">Validation</li>
             </ol>
           </div>
         </div>
@@ -854,59 +850,50 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
-            <div class="card">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- jquery validation -->
+            <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3 class="card-title">Quick Example <small>jQuery Validation</small></h3>
               </div>
               <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example2" class="table table-bordered table-hover">
-                  <thead>
-                  <tr>
-                    <th>name</th>
-                    <th>address</th>
-                    <th>state</th>
-                    <th>district</th>
-                    <th>contact</th>
-                    <th>email</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                    <?php foreach ($dis as $row)
-                    { ?>
-  
-                  <tr>
-                    <td><?php echo $row->name;?></td>
-                    <td><?php echo $row->address;?></td>
-                    <td><?php echo $row->state;?></td>
-                    <td><?php echo $row->district;?></td>
-                    <td><?php echo $row->contact;?></td>
-                    <td><?php echo $row->email;?></td>
-                    <td><a href="<?php echo base_url();?>Welcome/companyapproval/<?php echo $row->id;?>/" class='btn btn-success'>Approve</a><td>
-                    <td><a href="<?php echo base_url();?>Welcome/companyreject/<?php echo $row->id;?>/" class='btn btn-danger'>Reject</a></td>  
-                  </tr>
-                  <?php } ?>
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>name</th>
-                    <th>address</th>
-                    <th>state</th>
-                    <th>district</th>
-                    <th>contact</th>
-                    <th>email</th>
-                  </tr>
-                  </tfoot>
-                </table>
-              </div>
-              <!-- /.card-body -->
+              <!-- form start -->
+              <form id="quickForm" method="post" action="<?php echo base_url();?>Welcome/newsadd" >
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">News Update</label>
+                    <tr><td>News</td><td><textarea  name="news"></textarea></td></tr>
+                    <!-- <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"> -->
+                  </div>
+                  <!-- <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <div class="form-group mb-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
+                      <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a>.</label>
+                    </div>
+                  </div> -->
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
             </div>
             <!-- /.card -->
+            </div>
+          <!--/.col (left) -->
+          <!-- right column -->
+          <div class="col-md-6">
 
-           
-      </div>
-      <!-- /.container-fluid -->
+          </div>
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
@@ -927,43 +914,62 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="<?php echo base_url();?>admin/plugins/jquery/jquery.min.js"></script>
+<script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="<?php echo base_url();?>admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables  & Plugins -->
-<script src="<?php echo base_url();?>admin/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="<?php echo base_url();?>admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="<?php echo base_url();?>admin/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="<?php echo base_url();?>admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="<?php echo base_url();?>admin/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="<?php echo base_url();?>admin/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="<?php echo base_url();?>admin/plugins/jszip/jszip.min.js"></script>
-<script src="<?php echo base_url();?>admin/plugins/pdfmake/pdfmake.min.js"></script>
-<script src="<?php echo base_url();?>admin/plugins/pdfmake/vfs_fonts.js"></script>
-<script src="<?php echo base_url();?>admin/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="<?php echo base_url();?>admin/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="<?php echo base_url();?>admin/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- jquery-validation -->
+<script src="../../plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="../../plugins/jquery-validation/additional-methods.min.js"></script>
 <!-- AdminLTE App -->
-<script src="<?php echo base_url();?>admin/dist/js/adminlte.min.js"></script>
+<script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="<?php echo base_url();?>admin/dist/js/demo.js"></script>
+<script src="../../dist/js/demo.js"></script>
 <!-- Page specific script -->
 <script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
+$(function () {
+  $.validator.setDefaults({
+    submitHandler: function () {
+      alert( "Form successful submitted!" );
+    }
   });
+  $('#quickForm').validate({
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      },
+      password: {
+        required: true,
+        minlength: 5
+      },
+      terms: {
+        required: true
+      },
+    },
+    messages: {
+      email: {
+        required: "Please enter a email address",
+        email: "Please enter a vaild email address"
+      },
+      password: {
+        required: "Please provide a password",
+        minlength: "Your password must be at least 5 characters long"
+      },
+      terms: "Please accept our terms"
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
 </script>
 </body>
 </html>

@@ -882,6 +882,8 @@
                     <td><?php echo $row->age;?></td>
                     <td><?php echo $row->gender;?></td>
                     <td><?php echo $row->contact;?></td>
+                    <td><a href="<?php echo base_url();?>Welcome/contractapproval/<?php echo $row->id;?>/" class='btn btn-success'>Approve</a><td>
+                    <td><a href="<?php echo base_url();?>Welcome/contractreject/<?php echo $row->id;?>/" class='btn btn-danger'>Reject</a></td>  
                     
                   </tr>
                   <?php } ?>

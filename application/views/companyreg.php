@@ -1,5 +1,5 @@
 <h2>COMPANY REGISTRATION FORM</h2>
-<form action="<?php echo base_url();?>index.php/Welcome/companyregister" method="post">
+<form action="<?php echo base_url();?>Welcome/companyregister" method="post">
 	<table aligh="center">
 	<input type="hidden" name="hide" value="h">
 	<tr><td>Name</td><td><input type="text" name="name"></td></tr>

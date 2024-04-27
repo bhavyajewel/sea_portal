@@ -61,28 +61,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto text-center mr-lg-5">
 					<li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="<?php echo base_url();?>Welcome/jobviews">Job Apply</a>
+						<!-- <a class="nav-link" href="index.html">Home -->
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
 					<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="<?php echo base_url();?>Welcome/publicupdation_view">Profile</a>
+						<a class="nav-link" href="<?php echo base_url();?>Welcome/contractupdation_view">Profile</a>
 					</li>
 					<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="<?php echo base_url();?>Welcome/newstableviews">News</a>
+						<a class="nav-link" href="<?php echo base_url();?>Welcome/tendercontractviews">Tenders</a>
 					</li>
 					<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						user export details
+							pages
 						</a>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="<?php echo base_url();?>Welcome/userexport">userexport</a>
+							<a class="dropdown-item" href="404.html">404</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="typo.html">Typography</a>
 						</div>
 					</li>
 					<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="<?php echo base_url();?>Welcome/shipexportview">Export</a>
+						<a class="nav-link" href="<?php echo base_url();?>Welcome/tenderapprovedview"">Tender Approve</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="contact.html">Contact Us</a>
@@ -122,7 +122,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="w3l-overlay">
 						<div class="container">
 							<div class="slider-text text-black p-lg-5 p-4">
-							<h6>Transport your goods</h6>
+								<h6>Transport your goods</h6>
 								<h6>Efficient service and trust-worthy transactions.</h6>
 								<h3 class="mt-lg-3 mt-2 mb-lg-4 mb-3">Around the World</h3>
 								<p style="color:white;">A sea portal is a type of intermodel transportation facility that allows cargo to be transferred between ships and other models of transportation, such as trucks or trains. It's essentially a hub for effecient cargo handling and transfer.</p>
@@ -150,7 +150,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="slider-text text-white  p-lg-5 p-4">
 								<h6>With help from our fleet</h6>
 								<h3 class="mt-lg-3 mt-2 mb-lg-4 mb-3">Send it anywhere</h3>
-								<!-- <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p> -->
+								<p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
 							</div>
 						</div>
 						<div class="row carousel-caption">
@@ -200,7 +200,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="slider-text text-white  p-lg-5 p-4">
 								<h6>With help from our fleet</h6>
 								<h3 class="mt-lg-3 mt-2 mb-lg-4 mb-3">Send it anywhere</h3>
-								<p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+								<!-- <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p> -->
 							</div>
 						</div>
 						<div class="row carousel-caption">
@@ -232,7 +232,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- //carousel slider -->
 	</header>
 	<!-- //header -->
-	
 
 	<!-- welcome -->
 	<div class="about py-sm-5 py-4">
@@ -240,9 +239,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="row py-xl-5 py-lg-3">
 				<div class="col-lg-7 about-left">
 					<h5>We are best in this industry from last 30 Years.</h5>
-					<!-- <p class="mt-md-3 mt-2 mb-lg-5 mb-4">Masagni dolores eoquie int Basmodi temporant, ut laboreas dolore magnam aliquam kuytase uaeraquis autem vel eum iure
+					<p class="mt-md-3 mt-2 mb-lg-5 mb-4">Masagni dolores eoquie int Basmodi temporant, ut laboreas dolore magnam aliquam kuytase uaeraquis autem vel eum iure
 						reprehend.Unicmquam eius, Basmodi temurer sehsMunim.Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-						accusantium doloremque laudantium.</p> -->
+						accusantium doloremque laudantium.</p>
 					<h6 class="mb-lg-4 mb-3">Our Benefits</h6>
 					<ul>
 						<li class="mb-2">
@@ -391,7 +390,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- middle section -->
 	<div class="middle-w3l py-sm-5 py-4">
 		<div class="container py-xl-5 py-lg-3">
-			<h2>reach your destination 100% sure and safe</h2>
+			<h2>Reach your destination 100% sure and safe</h2>
 			<!-- <p class="my-md-4 my-2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p> -->
 			<a href="contact.html" class="btn btn-secondary btn-lg button2-w3l mt-4" role="button" aria-pressed="true">Contact Us</a>
 		</div>
@@ -406,7 +405,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h5>World wide Transport with in 24 hours</h5>
 				</div>
 				<div class="col-lg-7 w3ls_footer_grid1_right text-lg-right text-center">
-					<!-- <ul>
+					<ul>
 						<li class="mr-3">
 							<a href="index.html" class="active">Home</a>
 						</li>
@@ -422,7 +421,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li>
 							<a href="contact.html">Contact Us</a>
 						</li>
-					</ul> -->
+					</ul>
 				</div>
 			</div>
 			<div class="row">
@@ -444,11 +443,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</li>
 					</ul>
 				</div>
-				<div class="col-lg-6 w3ls_footer_grid1_left mt-lg-2 mt-4 text-lg-right text-center">
-					<!-- <p>&copy; 2018 Transports. All rights reserved | Design by
+				<!-- <div class="col-lg-6 w3ls_footer_grid1_left mt-lg-2 mt-4 text-lg-right text-center">
+					<p>&copy; 2018 Transports. All rights reserved | Design by
 						<a href="http://w3layouts.com/">W3layouts</a>
-					</p> -->
-				</div>
+					</p>
+				</div> -->
 			</div>
 		</div>
 	</footer>

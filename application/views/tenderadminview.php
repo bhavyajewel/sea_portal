@@ -67,7 +67,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?php echo base_url();?>admin/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -83,7 +83,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?php echo base_url();?>admin/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -99,7 +99,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?php echo base_url();?>admin/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -160,7 +160,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="<?php echo base_url();?>admin/index3.html" class="brand-link">
-      <img src="<?php echo base_url();?>admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
 
@@ -169,7 +169,7 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?php echo base_url();?>admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Alexander Pierce</a>
@@ -855,56 +855,65 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
+           
+
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3 class="card-title">DataTable with default features</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example2" class="table table-bordered table-hover">
+                <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>name</th>
-                    <th>address</th>
-                    <th>state</th>
-                    <th>district</th>
-                    <th>contact</th>
-                    <th>email</th>
+                    <th>Tender Category</th>
+                    <th>Tender Name</th>
+                    <th>Tender Details</th>
+                    <th>Amount</th>
+                    <th>Last date for apply</th>
+                    <th>date</th>
+                    <th></th>
+                    <th></th>
+
                   </tr>
                   </thead>
                   <tbody>
-                    <?php foreach ($dis as $row)
+                  <?php foreach ($dis as $row)
                     { ?>
   
                   <tr>
-                    <td><?php echo $row->name;?></td>
-                    <td><?php echo $row->address;?></td>
-                    <td><?php echo $row->state;?></td>
-                    <td><?php echo $row->district;?></td>
-                    <td><?php echo $row->contact;?></td>
-                    <td><?php echo $row->email;?></td>
-                    <td><a href="<?php echo base_url();?>Welcome/companyapproval/<?php echo $row->id;?>/" class='btn btn-success'>Approve</a><td>
-                    <td><a href="<?php echo base_url();?>Welcome/companyreject/<?php echo $row->id;?>/" class='btn btn-danger'>Reject</a></td>  
+                  <td><?php echo $row->tendercategory;?></td>
+                    <td><?php echo $row->tendername;?></td>
+                    <td><?php echo $row->tenderdetails;?></td>
+                    <td><?php echo $row->amount;?></td>
+                    <td><?php echo $row->lastdate;?></td>
+                    <td><?php echo $row->date;?></td>
+                    <td><a href="<?php echo base_url();?>Welcome/tenderupdatepage/<?php echo $row->id;?>"class='btn btn-success'>Edit</a></td>
+                    <td><a href="<?php echo base_url();?>Welcome/tender_delete/<?php echo $row->id;?>"class='btn btn-danger'>Cancel</a></td>
+                    <td><a href="<?php echo base_url();?>Welcome/tenderviewapply/<?php echo $row->id;?>"class='btn btn-warning'> tender apply view</a></td>
+
                   </tr>
                   <?php } ?>
+ 
                   </tbody>
-                  <tfoot>
+                  <!-- <tfoot>
                   <tr>
-                    <th>name</th>
-                    <th>address</th>
-                    <th>state</th>
-                    <th>district</th>
-                    <th>contact</th>
-                    <th>email</th>
+                    <th>Rendering engine</th>
+                    <th>Browser</th>
+                    <th>Platform(s)</th>
+                    <th>Engine version</th>
+                    <th>CSS grade</th>
                   </tr>
-                  </tfoot>
+                  </tfoot> -->
                 </table>
               </div>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
-
-           
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
       </div>
       <!-- /.container-fluid -->
     </section>
@@ -967,3 +976,12 @@
 </script>
 </body>
 </html>
+
+                   
+                  <tr>
+                   
+                  </tr>
+                  </tbody>
+                </table>
+
+                </body>

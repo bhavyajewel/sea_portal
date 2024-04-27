@@ -857,19 +857,19 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3 class="card-title">JOB VIEW</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>name</th>
-                    <th>address</th>
-                    <th>state</th>
-                    <th>district</th>
-                    <th>contact</th>
-                    <th>email</th>
+                  <th>Job Category</th>
+                    <th>Job Name</th>
+                    <th>Job details</th>
+                    <th>Qualifications </th>
+                    <th>last date for apply</th>
+                    <!-- <th>state</th> -->
                   </tr>
                   </thead>
                   <tbody>
@@ -877,25 +877,24 @@
                     { ?>
   
                   <tr>
-                    <td><?php echo $row->name;?></td>
-                    <td><?php echo $row->address;?></td>
-                    <td><?php echo $row->state;?></td>
-                    <td><?php echo $row->district;?></td>
-                    <td><?php echo $row->contact;?></td>
-                    <td><?php echo $row->email;?></td>
-                    <td><a href="<?php echo base_url();?>Welcome/companyapproval/<?php echo $row->id;?>/" class='btn btn-success'>Approve</a><td>
-                    <td><a href="<?php echo base_url();?>Welcome/companyreject/<?php echo $row->id;?>/" class='btn btn-danger'>Reject</a></td>  
+                  <td><?php echo $row->jobcategory;?></td>
+                    <td><?php echo $row->jobname;?></td>
+                    <td><?php echo $row->jobdetails;?></td>
+                    <td><?php echo $row->qualification;?></td>
+                    <td><?php echo $row->lastdateforapply;?></td>
+
+                    <td><a href="<?php echo base_url();?>Welcome/jobedit_view/<?php echo $row->jobid;?>"class='btn btn-success'>Edit</a><td>
+                    <td><a href="<?php echo base_url();?>Welcome/jobdelete/<?php echo $row->jobid;?>"class='btn btn-danger'>Delete</a><td>
+
                   </tr>
                   <?php } ?>
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>name</th>
-                    <th>address</th>
-                    <th>state</th>
-                    <th>district</th>
-                    <th>contact</th>
-                    <th>email</th>
+                    <th>news</th>
+                    <th>current date</th>
+                  
+                   
                   </tr>
                   </tfoot>
                 </table>
