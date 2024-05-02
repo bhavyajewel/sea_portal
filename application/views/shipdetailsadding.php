@@ -1,7 +1,8 @@
-<h2>SHIP DETAILS ADDING</h2>
+<!-- <h2>SHIP DETAILS ADDING</h2> -->
+<br><br>
 <form action="<?php echo base_url();?>Welcome/shipdetailsprocess" method="post">
-	<table aligh="center">
-	<tr><td>Ship Category</td><td><select name="shipcategory">
+	<table align="center">
+	<tr><td>Ship Category</td><td><select name="shipcategory" class="form-control">
 		<option>Selelct</option>
 		<option>Cargo Carriers</option>
 		<option>Passenger Carriers</option>
@@ -18,11 +19,11 @@
 		<option>Cruise ships</option>
 		<option>General ships</option>
 	</select></tr>
-	<tr><td>Ship Name</td><td><input type="text" name="shipname"></td></tr>
-	<tr><td>Source</td><td><input type="text" name="source"></td></tr>
-	<tr><td>Destination</td><td><input type="text" name="destination"></td></tr>
-	<tr><td>Ship Details</td><td><textarea  name="shipdetails"></textarea></td></tr>
+	<tr><td>Ship Name</td><td><input type="text" name="shipname" class="form-control"></td></tr>
+	<tr><td>Source</td><td><input type="text" name="source" class="form-control"></td></tr>
+	<tr><td>Destination</td><td><input type="text" name="destination"class="form-control"></td></tr>
+	<tr><td>Ship Details</td><td><textarea  name="shipdetails" class="form-control"></textarea></td></tr>
 	<tr><td></td><td><input type="submit" value="submit" class="btn btn-success"></td></tr>
 	</table>
 	</form>
-
+<br><br>

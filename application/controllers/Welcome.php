@@ -39,6 +39,7 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('login');
 	}
+
 	public function companyhome()
 	{
 		$this->load->view('companyhome');
@@ -73,7 +74,9 @@ class Welcome extends CI_Controller
 
 	public function userreg()
 	{
+		$this->load->view('indexheader');
 		$this->load->view('publicregister');
+		$this->load->view('footer');
 	}
 	public function publicregister()
 	{
@@ -109,7 +112,9 @@ class Welcome extends CI_Controller
 	}
 	public function companyreg()
 	{
+		$this->load->view('indexheader');
 		$this->load->view('companyreg');
+		$this->load->view('footer');
 	}
 	public function companyregister()
 	{
@@ -120,7 +125,7 @@ class Welcome extends CI_Controller
 			'address' => $this->input->post('address'),
 			'state' => $this->input->post('state'),
 			'district' => $this->input->post('district'),
-			'contact' => $this->input->post('contact')
+			'contact' => $this->input->post('contact_number')
 		);
 		$da = array(
 			'email' => $this->input->post('email'),
@@ -142,12 +147,18 @@ class Welcome extends CI_Controller
 	}
 	public function companyupdation_view()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '1') 
+		{
 		$this->load->view('companyheader');
 		$id = $this->session->userid;
 		$data['id'] = $this->session->userid;
 		$data['views'] = $this->Usermodel->companyupdation_dataview($id);
 		$this->load->view('companyupdation', $data);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 	public function companyupdation()
 	{
@@ -183,7 +194,9 @@ class Welcome extends CI_Controller
 	}
 	public function contractreg()
 	{
+		$this->load->view('indexheader');
 		$this->load->view('contractreg');
+		$this->load->view('footer');
 	}
 	public function contractregister()
 	{
@@ -217,15 +230,24 @@ class Welcome extends CI_Controller
 	}
 	public function contractupdation_view()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '2') 
+		{
 		$this->load->view('contractorheader');
 		$id = $this->session->userid;
 		$data['id'] = $this->session->userid;
 		$data['views'] = $this->Usermodel->contractupdation_dataview($id);
 		$this->load->view('contractupdation', $data);
 		$this->load->view('footer');
+		}
+		else
+   {
+     			redirect('Welcome/login','refresh');
+
+   }
 	}
 	public function contractupdation()
 	{
+		
 		// $pass=$this->input->post('password');
 		// $newpassword=$this->Usermodel->hash_password($pass);
 		$id = $this->input->post('hide');
@@ -258,12 +280,20 @@ class Welcome extends CI_Controller
 	}
 	public function publicupdation_view()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 		$this->load->view('userheader');
 		$id = $this->session->userid;
 		$data['id'] = $this->session->userid;
 		$data['views'] = $this->Usermodel->publicupdation_dataview($id);
 		$this->load->view('publicupdation', $data);
 		$this->load->view('footer');
+	    }
+         else
+      {
+		 redirect('Welcome/login','refresh');
+
+      }
 	}
 	public function publicupdation()
 	{
@@ -403,13 +433,30 @@ class Welcome extends CI_Controller
 	}
 	public function news()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '0') 
+		{
 		// $data['dis']=$this->Usermodel->newsupdate();
 		$this->load->view('newsupdate');
+		$this->load->view('footer');
+		}
+		else
+		{
+			redirect('Welcome/login', 'refresh');
+		}
 	}
 	public function addnews()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '0') 
+		{
 		$this->load->view('news');
+		$this->load->view('footer');
+		}
+		else
+		{
+			redirect('Welcome/login', 'refresh');
+		}
 	}
+
 	public function newsadd()
 	{
 		$date = date('Y-m-d');
@@ -429,24 +476,42 @@ class Welcome extends CI_Controller
 	}
 	public function newstable()
 	{
-		// $id=$this->session->userid;
-		// $data['id']=$this->session->userid;
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '0') 
+		{
 		$data['dis'] = $this->Usermodel->newstable();
 		$this->load->view('newstable', $data);
+		}
+		else
+		{
+			redirect('Welcome/login', 'refresh');
+		}
 	}
 	public function newsview()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '0') 
+		{
 		$this->load->view('updatenews');
+	}
+	else
+	{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 	public function newsupdation_dataview()
 	{
-		
+        if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '0') 
+		{
 		$this->load->view('userheader');
 		$data['id'] = $this->uri->segment(3);
 		$id = $this->uri->segment(3);
 		$data['views'] = $this->Usermodel->newsupdation_dataview($id);
 		$this->load->view('editnews', $data);
 		$this->load->view('footer');
+	}
+	else
+	{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 	public function newsupdation()
 	{
@@ -485,16 +550,28 @@ class Welcome extends CI_Controller
 	}
 	public function newstableviews()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 		$this->load->view('userheader');
 		$data['dis'] = $this->Usermodel->newstableviews();
 		$this->load->view('newstableview', $data);
 		$this->load->view('footer');
+		}
+		else{
+			redirect('Welcome/login', 'refresh');
+		}
 	}
 	public function shipdetails()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '1') 
+		{
 		$this->load->view('companyheader');
 		$this->load->view('shipdetailsadding');
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 
 	}
 	public function shipdetailsprocess()
@@ -522,21 +599,35 @@ class Welcome extends CI_Controller
 	}
 	public function shipview()
 	{
-		$this->load->view('companyheader');
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
+		$this->load->view('userheader');
 		$id = $this->session->userid;
 		$data['dis'] = $this->Usermodel->shipdetailsviews($id);
 		$this->load->view('shipdetailsview', $data);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 
 	}
 	public function ship_edit_view()
 	{
+		
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 		$this->load->view('companyheader');
 		$shipid = $this->uri->segment(3);
 		$data['id'] = $this->uri->segment(3);
 		$data['dis'] = $this->Usermodel->shipupdation_dataview($shipid);
 		$this->load->view('shipedit', $data);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
+
 	}
 	public function shipupdation()
 	{
@@ -576,16 +667,28 @@ class Welcome extends CI_Controller
 	}
 	public function ship_public_view()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 		$data['dis'] = $this->Usermodel->shippublic();
 		$this->load->view('shippublicview', $data);
 	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
+	}
 	public function exports()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '2') 
+		{
 		$this->load->view('userheader');
 		$get['shipid'] = $this->uri->segment(3);
 		$get['category'] = $this->Usermodel->getcategory();
 		$this->load->view('exportdetails', $get);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 	public function shipexportprocess()
 	{
@@ -621,6 +724,8 @@ class Welcome extends CI_Controller
 	}
 	public function shipexportview()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 		$this->load->view('userheader');
 		$search = $this->input->post('search');
 		// $check=$this->Usermodel->search();
@@ -632,14 +737,24 @@ class Welcome extends CI_Controller
 		$this->load->view('shipexportview', $data);
 		$this->load->view('footer');
 	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
+	}
 	public function shipexportedit_view()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '1') 
+		{
 		$this->load->view('userheader');
 		$shipid = $this->uri->segment(3);
 		$data['id'] = $this->uri->segment(3);
 		$data['dis'] = $this->Usermodel->exportupdation_dataview($shipid);
 		$this->load->view('shipexportedit', $data);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 	public function exportupdation()
 	{
@@ -679,18 +794,30 @@ class Welcome extends CI_Controller
 	}
 	public function exportdetailsview()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 		$this->load->view('companyheader');
 		$id = $this->session->userid;
 		$data['dis'] = $this->Usermodel->exportdetailsview($id);
 		$this->load->view('exportdetailsview', $data);
 		$this->load->view('footer');
 	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
+	}
 
 	public function exportingchannel()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '1') 
+		{
 		$this->load->view('companyheader');
 		$this->load->view('exportingchannel');
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 	public function exportchannel()
 	{
@@ -758,11 +885,17 @@ class Welcome extends CI_Controller
 	}
 	public function userexport()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 		$this->load->view('userheader');
 		$id = $this->session->userid;
 		$data['dis'] = $this->Usermodel->userexport($id);
 		$this->load->view('userexportview', $data);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 	public function cancelstatus()
 	{
@@ -779,19 +912,32 @@ class Welcome extends CI_Controller
 	}
 	public function shiporders()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 		$this->load->view('companyheader');
 		$id = $this->uri->segment(3);
 		// $data['id']=$this->session->id;
 		$data['dis'] = $this->Usermodel->shiporders($id);
 		$this->load->view('shiporders', $data);
+		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 	public function complaints()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 		$get['shipid'] = $this->uri->segment(3);
 		$get['exportid'] = $this->uri->segment(4);
 		$this->load->view('userheader');
 		$this->load->view('complaints', $get);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 	public function complaint()
 	{
@@ -818,20 +964,32 @@ class Welcome extends CI_Controller
 	}
 	public function complaintsview()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 		$this->load->view('companyheader');
 		$shipid = $this->uri->segment(3);
 		$data['dis'] = $this->Usermodel->complaintsview($shipid);
 		$this->load->view('complaintsview', $data);
 		$this->load->view('footer');
 	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
+	}
 
 	public function refunds()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 		$get['shipid'] = $this->uri->segment(3);
 		$get['exportid'] = $this->uri->segment(4);
 		$this->load->view('companyheader');
 		$this->load->view('refund', $get);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 
 	public function refund_process()
@@ -899,14 +1057,26 @@ class Welcome extends CI_Controller
 	}
 	public function tenderadding()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '2') 
+		{
 		$this->load->view('companyheader');
 		$this->load->view('tender');
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 
 	}
 	public function admintenders()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '0') 
+		{
 		$this->load->view('admintenderpost');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 
 	public function tender()
@@ -933,28 +1103,33 @@ class Welcome extends CI_Controller
 
 	}
 
-	// public function tenderviews($id)
-	// {
-	// 	// $this->load->view('userheader');
-	// 	$data['dis'] = $this->Usermodel->tenderview();
-	// 	$this->load->view('tenderadminview',$data);
-	// 	// $this->load->view('footer');
-	// }
 
 	public function tenderviews()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '0') 
+		{
 		// $this->load->view('userheader');
 		$data['dis'] = $this->Usermodel->tenderview();
 		$this->load->view('tenderadminview', $data);
 		// $this->load->view('footer');
 	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
+	}
 	
 	public function tenderupdatepage()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '0') 
+		{
 		$id = $this->uri->segment(3);
 		$data['id'] = $this->uri->segment(3);
 		$data['dis']=$this->Usermodel->tenderupdation_view($id);
 		$this->load->view('tenderadminedit', $data);
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 
 	public function tenderupdations()
@@ -996,21 +1171,33 @@ class Welcome extends CI_Controller
 
 	public function tendercontractviews()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '2') 
+		{
 		$id = $this->uri->segment(3);
-		$this->load->view('companyheader');
+		$this->load->view('contractorheader');
 		// $this->load->view('tendercontractview');
 		$data['dis']=$this->Usermodel->tendercontractview($id);
 		$this->load->view('tendercontractview',$data);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 
 	}
 
 	public function tenderapplynow()
 	{
-		$this->load->view('companyheader');
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '2') 
+		{
+		$this->load->view('contractorheader');
 		$tenderid['tid']=$this->uri->segment(3);
 		$this->load->view('tenderapplynow', $tenderid);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 
 	public function tenderapplynow1()
@@ -1039,10 +1226,16 @@ class Welcome extends CI_Controller
 
 	public function tenderviewapply()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '0') 
+		{
 		// $this->load->view('companyheader');
 		$data['dis'] = $this->Usermodel->tenderapplynow1();
 		$this->load->view('tenderapplyview', $data);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 
 	public function tenderapproval()
@@ -1061,17 +1254,29 @@ class Welcome extends CI_Controller
 
 	public function tenderapprovedview()
 	{
-		$this->load->view('companyheader');
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '2') 
+		{
+		$this->load->view('contractorheader');
 		$data['dis'] = $this->Usermodel->tenderapproveview1();
 		$this->load->view('tenderapproved', $data);
 		$this->load->view('footer');
 	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
+	}
 
 	public function jobss()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 		$this->load->view('companyheader');
 		$this->load->view('job');
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 
 	public function jobdetails()
@@ -1094,27 +1299,39 @@ class Welcome extends CI_Controller
 		$result = $this->Usermodel->job($data);
 		if ($result) {
 			echo "<script>alert('Job details added sucessfully')</script>";
-			redirect('Welcome/admin', 'refresh');
+			redirect('Welcome/companyhome', 'refresh');
 		} else {
 			echo "<script>alert('Job details adding unsucessfull')</script>";
 		}
 }
 public function jobviews()
 {
+	if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
 	$this->load->view('userheader');
 	$data['dis'] = $this->Usermodel->jobview();
 	$this->load->view('jobviewuser', $data);
 	$this->load->view('footer');
 }
+else{
+	redirect('Welcome/login', 'refresh');
+}
+}
 
 public function jobedit_view()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '0') 
+		{
 		$this->load->view('userheader');
 		$jobid = $this->uri->segment(3);
 		$data['jobid'] = $this->uri->segment(3);
 		$data['dis'] = $this->Usermodel->jobedit_dataview($jobid);
 		$this->load->view('jobedit', $data);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 
 public function jobupdations()
@@ -1153,12 +1370,71 @@ public function jobupdations()
 		}
 	}
 
+	public function jobupdation_comview()
+	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
+		$this->load->view('userheader');
+		$jobid = $this->uri->segment(3);
+		$data['jobid'] = $this->uri->segment(3);
+		$data['dis'] = $this->Usermodel->jobedit_companyview($jobid);
+		$this->load->view('jobeditcompany', $data);
+		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
+	}
+
+	public function jobupdationscompany()
+	{
+
+		$id = $this->input->post('hide');
+		//   $loginid=$this->session->userid;
+		$data = array(
+			'jobcategory' => $this->input->post('jobcategory'),
+			'jobname' => $this->input->post('jobname'),
+			'jobdetails' => $this->input->post('jobdetails'),
+			'qualification' => $this->input->post('qualification'),
+			'lastdateforapply' => $this->input->post('lastdateforapply'),
+		);
+
+
+		$result = $this->Usermodel->jobupdations($data,$id);
+
+		if ($result) {
+			echo "<script>alert(' Job Updation successfull')</script>";
+			redirect('Welcome/companyhome', 'refresh');
+		} else {
+			echo "<script>alert('Job Updation unsuccessfull')</script>";
+		}
+
+	}
+
+	public function jobdeletecompany()
+	{
+		$get = $this->uri->segment(3);
+		$model = $this->Usermodel->jobdeletecom($get);
+		if ($model) {
+			echo "<script>alert('Successfully Rejected')</script>";
+			redirect('Welcome/companyhome', 'refresh');
+		} else {
+			echo "<script>alert('Rejection Unsuccessfull')</script>";
+		}
+	}
+
 	public function jobviewadmin1()
 {
+	if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '0') 
+		{
 	// $this->load->view('userheader');
 	$data['dis'] = $this->Usermodel->jobviewadmins();
 	$this->load->view('jobviewadmin', $data);
 	// $this->load->view('footer');
+}
+else{
+	redirect('Welcome/login', 'refresh');
+}
 }
 
 public function jobapplynow()
@@ -1177,31 +1453,50 @@ public function jobapplynow()
 		$result = $this->Usermodel->jobapplynow_1($data,$jobid);
 		if ($result) {
 			echo "<script>alert('job applied sucessfully')</script>";
-			redirect('Welcome/user', 'refresh');
+			redirect('Welcome/companyhome', 'refresh');
 		} else {
 			echo "<script>alert('job apply is unsucessfull')</script>";
 		}
 
 	}
 
+	public function jobviewscompany()
+{
+	if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
+	$this->load->view('companyheader');
+	$data['dis'] = $this->Usermodel->jobview();
+	$this->load->view('jobviewcompany', $data);
+	$this->load->view('footer');
+}
+else{
+	redirect('Welcome/login', 'refresh');
+}
+}
+
 	public function interviewform()
 	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '1') 
+		{
 		$this->load->view('companyheader');
-		$this->load->view('interviewform');
+		$data['id'] = $this->uri->segment(3);
+		$this->load->view('interviewform', $data);
 		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
 	}
 
 	public function interview()
 	{
 		$id = $this->input->post('hide');
-		// $loginid = $this->session->userid;
 		$date= date('Y-m-d H:i:s');
 		$data = array(
+			'jobapplyid' =>$id,
 			'interview_date' => $this->input->post('interview_date'),
 			'time' => $this->input->post('time'),
 			'venue' => $this->input->post('venue'),
-			'cv' => $this->input->post('cv'),
-			// 'loginid' => $loginid,
 			'currentdate'=> $date,
 
 		);
@@ -1216,6 +1511,41 @@ public function jobapplynow()
 		}
 
 	}
+
+	public function candidateapplyview()
+	{
+		if (isset($_SESSION['logined']) && $_SESSION['logined'] === true && $_SESSION['usertype'] === '3') 
+		{
+		$this->load->view('companyheader');
+		$id = $this->uri->segment(3);
+		$data['dis'] = $this->Usermodel->candidateapplyview1($id);
+		$this->load->view('candidateapplyview', $data);
+		$this->load->view('footer');
+	}
+	else{
+		redirect('Welcome/login', 'refresh');
+	}
+	}
+
+	public function indexhome()
+	{
+		$this->load->view('indexpage');	
+	}
+
+	public function logout() 
+    {
+      $data = new stdClass();
+        if (isset($_SESSION['logined']) && $_SESSION['logined'] === true) {
+          foreach ($_SESSION as $key => $value) {
+            unset($_SESSION[$key]);
+          }
+          $this->session->set_flashdata('logout_notification', 'logged_out');
+          redirect('Welcome/indexhome', 'refresh');  
+    } else {
+          redirect('Welcome/login' , 'refresh'); 
+           
+        }
+    }
 }
 
 

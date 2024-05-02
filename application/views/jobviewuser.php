@@ -22,7 +22,7 @@
                     <td><?php echo $row->lastdateforapply;?></td>
                     
                     <td><a href="<?php echo base_url();?>Welcome/jobapplynow/<?php echo $row->jobid;?>"class='btn btn-success'>Apply</a><td>
-                    <!-- <td><a href="<?php echo base_url();?>Welcome/jobdelete/<?php echo $row->jobid;?>"class='btn btn-danger'>Delete</a><td> -->
+                    <td><a href="<?php echo base_url();?>Welcome//<?php echo $row->jobid;?>"class='btn btn-warning'>Interview Schedule</a><td>
 
             
 

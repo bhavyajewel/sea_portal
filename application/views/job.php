@@ -1,8 +1,9 @@
-<h2>JOBS FORM</h2>
+<!-- <h2>JOBS FORM</h2> -->
+<br><br>
 <form action="<?php echo base_url();?>Welcome/jobdetails" method="post">
-	<table aligh="center">
+	<table align="center">
 	<input type="hidden" name="hide" value="">
-    <tr><td>Job Category</td><td><select name="jobcategory">
+    <tr><td>Job Category</td><td><select name="jobcategory" class="form-control">
 		<option>Selelct</option>
 		<option>Captain</option>
 		<option>Marine Engineer</option>
@@ -23,18 +24,20 @@
         <option>HR Post</option>
         <option>IT engineers</option>
 	</select></tr>
-    <tr><td>Job Name</td><td><input type="text" name="jobname"></td></tr>
-    <tr><td>Job details</td><td><input type="text" name="jobdetails"></td></tr>
-    <tr><td>Qualifications</td><td><select name="qualification">
+    <tr><td>Job Name</td><td><input type="text" name="jobname" class="form-control"></td></tr>
+    <tr><td>Job details</td><td><input type="text" name="jobdetails" class="form-control"></td></tr>
+    <tr><td>Qualifications</td><td><select name="qualification" class="form-control">
 		<option>Selelct</option>
 		<option>Tenth Passed</option>
 		<option>+2 pass </option>
 		<option>Degree</option>
+		<option>Post Graduate</option>
 		<option>Engineering</option>
         <option>Diploma</option>
 		<option>others</option>
 	</select></tr>
-    <tr><td>last date for apply</td><td><input type="date" name="lastdateforapply"></td></tr>
+    <tr><td>last date for apply</td><td><input type="date" name="lastdateforapply" class="form-control"></td></tr>
 	<tr><td></td><td><input type="submit" value="register" class="btn btn-success"></td></tr>
 	</table>
 	</form>
+	<br><br>

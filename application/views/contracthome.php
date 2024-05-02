@@ -71,7 +71,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
 						<a class="nav-link" href="<?php echo base_url();?>Welcome/tendercontractviews">Tenders</a>
 					</li>
-					<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+					<!-- <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							pages
 						</a>
@@ -80,12 +80,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="typo.html">Typography</a>
 						</div>
-					</li>
+					</li> -->
 					<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="<?php echo base_url();?>Welcome/tenderapprovedview"">Tender Approve</a>
+						<a class="nav-link" href="<?php echo base_url();?>Welcome/tenderapprovedview">Tender Approve</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="contact.html">Contact Us</a>
+						<a class="nav-link" href="<?php echo base_url();?>Welcome/logout">Log Out</a>
 					</li>
 				</ul>
 				<form class="navbar-form" role="search" action="#" method="post">
@@ -97,11 +97,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<span class="sr-only">Close</span>
 								</span>
 							</button>
-							<button type="submit" class="btn btn-default">
+							<!-- <button type="submit" class="btn btn-default">
 								<span class="fas fa-search">
 									<span class="sr-only">Search</span>
 								</span>
-							</button>
+							</button> -->
 						</span>
 					</div>
 				</form>
@@ -238,7 +238,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container">
 			<div class="row py-xl-5 py-lg-3">
 				<div class="col-lg-7 about-left">
-					<h5>We are best in this industry from last 30 Years.</h5>
+					<!-- <h5>We are best in this industry from last 30 Years.</h5>
 					<p class="mt-md-3 mt-2 mb-lg-5 mb-4">Masagni dolores eoquie int Basmodi temporant, ut laboreas dolore magnam aliquam kuytase uaeraquis autem vel eum iure
 						reprehend.Unicmquam eius, Basmodi temurer sehsMunim.Sed ut perspiciatis unde omnis iste natus error sit voluptatem
 						accusantium doloremque laudantium.</p>
@@ -254,12 +254,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<i class="fas fa-check mr-3"></i>Best Tracking system on every step</li>
 						<li class="mb-2">
 							<i class="fas fa-check mr-3"></i>Free Insurance for your goods</li>
-					</ul>
-				</div>
+					</ul> -->
+				<!-- </div>
 				<div class="col-lg-5">
 					<div class="about-right px-lg-4 py-lg-3 p-4">
-						<form action="#" method="post">
-							<div class="form-group">
+						<form action="#" method="post"> -->
+							<!-- <div class="form-group">
 								<label class="col-form-label">I Need</label>
 								<select class="category form-control" required="">
 									<option value="">Choose Value</option>
@@ -269,9 +269,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<option value="">Warehousing</option>
 									<option value="">Door to door delivery</option>
 								</select>
-							</div>
-							<div class="form-group">
-								<label class="col-form-label">Commodity</label>
+							</div> -->
+							<!-- <div class="form-group"> -->
+								<!-- <label class="col-form-label">Commodity</label>
 								<select class="category form-control" required="">
 									<option value="">Choose Value</option>
 									<option value="">We can package and store your things.</option>
@@ -279,8 +279,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<option value="">We can transport your things anywhere in the world. </option>
 									<option value="">We have top notch security and loads of space</option>
 									<option value="">Do you need something delivered? </option>
-								</select>
-							</div>
+								</select> -->
+							<!-- </div>
 							<div class="form-group">
 								<label class="col-form-label">Distance (km)</label>
 								<input type="text" class="form-control" placeholder=" " name="distance" required="">
@@ -295,10 +295,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 							<div class="right-w3l">
 								<input type="submit" class="form-control" value="Submit">
-							</div>
-						</form>
-					</div>
-				</div>
+							</div> -->
+						<!-- </form>
+					</div> -->
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>
@@ -315,27 +315,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<!-- Owl-Carousel -->
 					<div id="owl-demo" class="owl-carousel owl-theme text-center agileinfo-gallery-row">
 						<a class="item g1">
-							<img class="lazyOwl img-fluid" src="<?php echo base_url();?>user/images/m1.jpg" title="Transports" alt="" />
+							<img class="lazyOwl img-fluid" src="<?php echo base_url();?>user/images/shipss.jpg" title="Transports" alt="" />
 						</a>
 						<a class="item g1">
-							<img class="lazyOwl img-fluid" src="<?php echo base_url();?>user/images/m5.jpg" title="Transports" alt="" />
+							<img class="lazyOwl img-fluid" src="<?php echo base_url();?>user/images/ship1.jpg" title="Transports" alt="" />
 						</a>
 						<a class="item g1">
-							<img class="lazyOwl img-fluid" src="<?php echo base_url();?>user/images/m3.jpg" title="Transports" alt="" />
+							<img class="lazyOwl img-fluid" src="<?php echo base_url();?>user/images/ship2.jpg" title="Transports" alt="" />
 						</a>
 						<a class="item g1">
-							<img class="lazyOwl img-fluid" src="<?php echo base_url();?>user/images/m4.jpg" title="Transports" alt="" />
+							<img class="lazyOwl img-fluid" src="<?php echo base_url();?>user/images/ship3.jpg" title="Transports" alt="" />
 						</a>
 						<a class="item g1">
-							<img class="lazyOwl img-fluid" src="<?php echo base_url();?>user/images/m2.jpg" title="Transports" alt="" />
+							<img class="lazyOwl img-fluid" src="<?php echo base_url();?>user/images/ship5.jpg" title="Transports" alt="" />
 						</a>
 						<a class="item g1">
-							<img class="lazyOwl img-fluid" src="<?php echo base_url();?>user/images/m6.jpg" title="Transports" alt="" />
+							<img class="lazyOwl img-fluid" src="<?php echo base_url();?>user/images/ship6.jpg" title="Transports" alt="" />
 						</a>
-					</div>
+					<!-- </div>
 					<a class="button secondary btn py-2 px-4 play">Play</a>
 					<a class="button secondary btn py-2 px-4 stop">Stop</a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -392,7 +392,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container py-xl-5 py-lg-3">
 			<h2>Reach your destination 100% sure and safe</h2>
 			<!-- <p class="my-md-4 my-2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p> -->
-			<a href="contact.html" class="btn btn-secondary btn-lg button2-w3l mt-4" role="button" aria-pressed="true">Contact Us</a>
+			<!-- <a href="contact.html" class="btn btn-secondary btn-lg button2-w3l mt-4" role="button" aria-pressed="true">Contact Us</a> -->
 		</div>
 	</div>
 	<!-- //middle section -->
@@ -405,7 +405,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h5>World wide Transport with in 24 hours</h5>
 				</div>
 				<div class="col-lg-7 w3ls_footer_grid1_right text-lg-right text-center">
-					<ul>
+					<!-- <ul>
 						<li class="mr-3">
 							<a href="index.html" class="active">Home</a>
 						</li>
@@ -421,7 +421,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li>
 							<a href="contact.html">Contact Us</a>
 						</li>
-					</ul>
+					</ul> -->
 				</div>
 			</div>
 			<div class="row">

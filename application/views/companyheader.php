@@ -54,7 +54,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto text-center mr-lg-5">
 					<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="index.html">Home
+						<a class="nav-link" href="<?php echo base_url();?>Welcome/companyhome">Home
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
@@ -78,7 +78,7 @@
 						<a class="nav-link" href="<?php echo base_url();?>Welcome/exportdetailsview">Export details</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="contact.html">Contact Us</a>
+						<a class="nav-link" href="<?php echo base_url();?>Welcome/logout">Log Out</a>
 					</li>
 				</ul>
 				<form class="navbar-form" role="search" action="#" method="post">
@@ -90,11 +90,11 @@
 									<span class="sr-only">Close</span>
 								</span>
 							</button>
-							<button type="submit" class="btn btn-default">
+							<!-- <button type="submit" class="btn btn-default">
 								<span class="fas fa-search">
 									<span class="sr-only">Search</span>
 								</span>
-							</button>
+							</button> -->
 						</span>
 					</div>
 				</form>

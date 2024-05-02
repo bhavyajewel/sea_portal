@@ -11,7 +11,7 @@
                     <th>Recepient Name</th>
                     <th>Recepient Address </th>
                     <th>Recepient Contact</th>
-                    <th>Status</th>
+                    <!-- <th>Status</th> -->
                   </tr>
                   </thead>
                   <tbody>

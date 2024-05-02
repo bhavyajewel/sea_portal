@@ -848,17 +848,17 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form action="<?php echo base_url();?>Welcome/tenderupdations"  method="post">
-              <input type="hidden" name="hide" value="<?php echo $id ;?>">
+              <input type="hidden" name="hide" class="form-control" value="<?php echo $id ;?>">
                 <div class="card-body">
                 <?php foreach ($dis as $row) { ?>
                   <div class="form-group">
                     <!-- <label for="exampleInputEmail1">tender adding</label> -->
-                    <tr><td>Tender Category  </td><td><input type="text" name="tendercategory"  value="<?php echo $row->tendercategory;?>"></td></tr><br><br>
-	                <tr><td>Tender Name  </td><td><input type="text" name="tendername"  value="<?php echo $row->tendername;?>"></td></tr><br><br>
-	                <tr><td>Tender details  </td><td><input type="text" name="tenderdetails"  value="<?php echo $row->tenderdetails;?>"></td></tr><br><br>
-	                <tr><td>Amount  </td><td><input type="text" name="amount"  value="<?php echo $row->amount;?>"></td></tr><br><br>
-                    <tr><td>Last date for apply  </td><td><input type="date" name="lastdate"  value="<?php echo $row->lastdate;?>"></td></tr><br><br>
-	                <tr><td>date  </td><td><input type="date" name="date" value="<?php echo $row->date;?>"></td></tr><br><br>
+                    <tr><td>Tender Category  </td><td><input type="text" name="tendercategory" class="form-control" value="<?php echo $row->tendercategory;?>"></td></tr><br><br>
+	                <tr><td>Tender Name  </td><td><input type="text" name="tendername" class="form-control" value="<?php echo $row->tendername;?>"></td></tr><br><br>
+	                <tr><td>Tender details  </td><td><input type="text" name="tenderdetails" class="form-control" value="<?php echo $row->tenderdetails;?>"></td></tr><br><br>
+	                <tr><td>Amount  </td><td><input type="text" name="amount" class="form-control" value="<?php echo $row->amount;?>"></td></tr><br><br>
+                    <tr><td>Last date for apply  </td><td><input type="date" name="lastdate" class="form-control" value="<?php echo $row->lastdate;?>"></td></tr><br><br>
+	                <tr><td>date  </td><td><input type="date" name="date"class="form-control" value="<?php echo $row->date;?>"></td></tr><br><br>
 	                   <tr><td></td><td><input type="submit" value="submit" class="btn btn-success"></td></tr>
                     <!-- <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"> -->
                   </div>

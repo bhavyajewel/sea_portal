@@ -533,6 +533,39 @@ class Usermodel extends CI_Model
       $this->db->where('jobid', $get);
       return $this->db->delete('job');
    }
+   // public function jobapplyview()
+   // {
+   //    $this->db->select('*');
+   //    $this->db->from('jobapply');
+   //    $this->db->order_by('jobid');
+   //    $query = $this->db->get();
+   //    return $query->result();
+   // }
+
+   public function jobapplynow_1($data,$jobid)
+   {
+      return $this->db->insert('jobapply',$data);
+   }
+   public function jobedit_companyview($jobid)
+   {
+      $this->db->select('*');
+      $this->db->from('job');
+      $this->db->where('jobid', $jobid);
+      $query = $this->db->get();
+      return $query->result();
+   }
+
+   public function jobupdations($data,$id)
+   {
+      $this->db->where('jobid',$id);
+      return $this->db->update('job',$data);
+   }
+   public function jobdeletecom($get)
+   {
+      $this->db->where('jobid', $get);
+      return $this->db->delete('job');
+   }
+
 
    public function jobviewadmins()
    {
@@ -544,8 +577,19 @@ class Usermodel extends CI_Model
    }
    public function interview1($data,$id)
    {
-      return $this->db->insert('interview', $data);
+      return $this->db->insert('interview',$data);
    }
 
+   public function candidateapplyview1($id)
+   {
+      // echo $id;exit;
+      $this->db->select('*');
+      $this->db->from('jobapply');
+      $this->db->join('publicreg', 'publicreg.loginid=jobapply.loginid','inner');
+      // $this->db->join('login','login.id=publicreg.loginid','inner');
+      $this->db->where('jobapply.jobid',$id);
+      $query = $this->db->get();
+      return $query->result();
+   }
 }
 ?>

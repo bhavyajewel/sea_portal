@@ -226,7 +226,7 @@
               </li> -->
             </ul>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="<?php echo base_url();?>admin/pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -243,7 +243,7 @@
                 <i class="fas fa-angle-left right"></i>
                 <span class="badge badge-info right">6</span>
               </p>
-            </a>
+            </a> -->
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?php echo base_url();?>admin/pages/layout/top-nav.html" class="nav-link">
@@ -304,10 +304,10 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-              <a href="<?php echo base_url();?>Welcome/jobss" class="nav-link">
+              <li class="nav-item"> 
+              <!-- <a href="<?php echo base_url();?>Welcome/jobss" class="nav-link"> -->
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Jobs</p>
+                  <!-- <p>Jobs</p> -->
                 </a>
               </li>
               <li class="nav-item">

@@ -1,9 +1,10 @@
-<h2>JOB EDIT FORM</h2>
+<!-- <h2>JOB EDIT FORM</h2> -->
+<br><br>
 <form action="<?php echo base_url();?>Welcome/jobupdations" method="post">
-	<table aligh="center">
-    <input type="hidden" name="hide" value="<?php echo $jobid?>">
+	<table align="center">
+    <input type="hidden" name="hide" class="form-control" value="<?php echo $jobid?>">
 	<?php foreach ($dis as $row) { ?>
-    <tr><td>Job Category</td><td><select name="jobcategory">
+    <tr><td>Job Category</td><td><select name="jobcategory" class="form-control">
 	<option Value="<?php echo $row->jobcategory;?>"><?php echo $row->jobcategory;?></option>
     <option>Selelct</option>
     <option>Selelct</option>
@@ -26,10 +27,10 @@
         <option>HR Post</option>
         <option>IT engineers</option>
 	</select></tr>
-    <tr><td>Job Name</td><td><input type="text" name="jobname" value="<?php echo $row->jobname;?>">></td></tr>
-	<tr><td>Job details</td><td><input type="text" name="jobdetails" value="<?php echo $row->jobdetails;?>"></td></tr>
-	<tr><td>Qualifications</td><td><input type="text" name="qualification" value="<?php echo $row->qualification;?>"></td></tr>
-    <tr><td>Last date for apply</td><td><input type="text" name="lastdateforapply" value="<?php echo $row->lastdateforapply;?>"></td></tr>
+    <tr><td>Job Name</td><td><input type="text" name="jobname" class="form-control" value="<?php echo $row->jobname;?>"></td></tr>
+	<tr><td>Job details</td><td><input type="text" name="jobdetails" class="form-control" value="<?php echo $row->jobdetails;?>"></td></tr>
+	<tr><td>Qualifications</td><td><input type="text" name="qualification" class="form-control" value="<?php echo $row->qualification;?>"></td></tr>
+    <tr><td>Last date for apply</td><td><input type="text" name="lastdateforapply" class="form-control" value="<?php echo $row->lastdateforapply;?>"></td></tr>
 	<tr><td></td><td><input type="submit" value="update" class="btn btn-success"></td></tr>
     <?php } ?>
 	</table>
